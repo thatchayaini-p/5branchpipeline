@@ -1,0 +1,20 @@
+pipeline {
+  agent any
+  stages {
+    stage('Build') {
+      steps {
+        echo "Building on branch: ${env.BRANCH_NAME}"
+      }
+    }
+    stage('Test') {
+      steps {
+        echo 'Running test script...'
+      }
+    }
+    stage('Deploy application') {
+      steps {
+        echo 'Deploying...'
+      }
+    }
+  }
+}
